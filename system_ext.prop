@@ -9,6 +9,9 @@ persist.bluetooth.bqr.min_interval_ms=6000
 # CNE
 persist.vendor.cne.feature=1
 
+# Display
+debug.sf.defer_refresh_rate_when_off=1
+
 # DPM
 persist.vendor.dpm.feature=11
 
