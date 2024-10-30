@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 11 (CPH2449_15.0.0.700(EX01)).
+## are from OnePlus 12R (CPH2585_15.0.0.701(EX01)).
 
 # Current blobs with ELF checks disabled:
 # libar-pal depends on libagmclient, which is a gnu makefile target
@@ -92,6 +92,7 @@ vendor/lib/rfsa/adsp/bm3a73v08s11n45.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n50.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n51.bin
 vendor/lib/rfsa/adsp/chre_qsh_shim.so
+vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
 vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
 vendor/lib/rfsa/adsp/libQnnHtpV73Skel.so;MODULE_SUFFIX=_vendor
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
@@ -99,11 +100,18 @@ vendor/lib/rfsa/adsp/libapn_dsp_skel.so
 vendor/lib/rfsa/adsp/libbitml_nsp_skel.so
 vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
+vendor/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
 vendor/lib/rfsa/adsp/libevadsp_3_0.so
+vendor/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
+vendor/lib/rfsa/adsp/libhalide_hexagon_remote_skel.so
 vendor/lib/rfsa/adsp/libhdr_skel.so
 vendor/lib/rfsa/adsp/libhme_dsp_skel.so
 vendor/lib/rfsa/adsp/libmctfengine_skel.so
 vendor/lib/rfsa/adsp/libosie_skel.so
+vendor/lib/rfsa/adsp/libqvr_3dof_tracker_skel.so
+vendor/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
+vendor/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
+vendor/lib/rfsa/adsp/libtracker_6dof_skel_8450.so
 vendor/lib/rfsa/adsp/nearby.napp_header;MODULE_SUFFIX=.napp_header
 vendor/lib/rfsa/adsp/nearby.so
 
@@ -366,6 +374,7 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.0.so
 vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 
 # Diag
+system/lib64/vendor.qti.diaghal-V1-ndk.so:system_ext/lib64/vendor.qti.diaghal-V1-ndk.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
@@ -931,7 +940,7 @@ odm/lib64/libQnnHtpV73Stub.so
 odm/lib64/libQnnSaver.so
 odm/lib64/libaiboost_qnn_sr.so
 odm/lib64/libaiboost_sr.so
-odm/lib64/libaiboost_te.so
+odm/lib64/libaiboost_te.so;FIX_SONAME
 odm/lib64/libaiboost_ubwc.so
 odm/lib64/libc++_shared.so
 vendor/lib64/libQnnCpu.so;MODULE_SUFFIX=_vendor
@@ -957,7 +966,7 @@ odm/bin/hw/vendor.oplus.hardware.stability.oplus_project-V1-service
 odm/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc
 odm/etc/vintf/manifest/manifest_oplus_stability_project_aidl.xml
 odm/lib64/vendor.oplus.hardware.stability.oplus_project-V2-ndk.so
-vendor/lib64/vendor.oplus.hardware.stability.oplus_project-V1-ndk.so
+vendor/lib64/vendor.oplus.hardware.stability.oplus_project-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # OPLUS URCC
 odm/lib64/liboplus-uah-client.so
@@ -1335,6 +1344,7 @@ odm/etc/vintf/manifest/manifest_secure_element.xml
 odm/lib64/android.hardware.secure_element@1.0-impl.so
 vendor/lib64/libGPMTEEC_vendor.so
 vendor/lib64/libGPTEE_vendor.so
+vendor/lib64/libesesbprovision.so
 
 # Sensors
 odm/bin/oplus_sensor_fb
@@ -1470,6 +1480,9 @@ vendor/lib64/libstreamparser.so
 vendor/lib64/libvideooptfeature.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/libvideoutils.so
+
+# VPP
+vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 
 # VPU firmware
 vendor/firmware/vpu20_1v.mbn
