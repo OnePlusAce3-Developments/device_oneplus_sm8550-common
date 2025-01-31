@@ -84,7 +84,7 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/oplus/vintf/device_framework_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    vendor/aosp/config/device_framework_matrix.xml
+    vendor/lineage/config/device_framework_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(COMMON_PATH)/framework_manifest.xml
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_FILE := \
@@ -269,3 +269,5 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Include the proprietary files BoardConfig.
 include vendor/oneplus/sm8550-common/BoardConfigVendor.mk
+include vendor/gms/common/BoardConfigVendor.mk
+
