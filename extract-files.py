@@ -42,6 +42,7 @@ lib_fixups: lib_fixups_user_type = {
     (
         'libpwirisfeature',
         'libpwirishalwrapper',
+        'vendor.oplus.hardware.radio-V2-ndk',
         'vendor.oplus.hardware.touch-V2-ndk',
     ): lib_fixup_odm_suffix,
     (
@@ -61,6 +62,7 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.pixelworks.hardware.feature@1.1',
         'vendor.qti.diaghal@1.0',
         'vendor.qti.hardware.dpmservice@1.0',
+        'vendor.qti.hardware.fm@1.0',
         'vendor.qti.hardware.qccsyshal@1.0',
         'vendor.qti.hardware.qccsyshal@1.1',
         'vendor.qti.hardware.qccsyshal@1.2',
@@ -77,17 +79,15 @@ lib_fixups: lib_fixups_user_type = {
         'libagmclient',
         'libpalclient',
         'vendor.qti.hardware.AGMIPC@1.0-impl',
+        'libwpa_client',
     ): lib_fixup_remove,
 }
 
 blob_fixups: blob_fixups_user_type = {
     'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff': blob_fixup()
         .add_needed('libshims_aidl_fingerprint_v2.oplus.so'),
-    'odm/bin/hw/vendor-oplus-hardware-performance-V1-service': blob_fixup()
-        .add_needed('libbase_shim.so')
-        .add_needed('libprocessgroup_shim.so'),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V6-ndk.so'),
+        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V5-ndk.so'),
     ('odm/lib64/libCOppLceTonemapAPI.so', 'odm/lib64/libSuperRaw.so', 'odm/lib64/libYTCommon.so', 'odm/lib64/libyuv2.so'): blob_fixup()
         .replace_needed('libstdc++.so', 'libstdc++_vendor.so'),
     ('odm/lib64/libHIS.so', 'odm/lib64/libOGLManager.so'): blob_fixup()
@@ -106,12 +106,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libziparchive.so', 'libziparchive_odm.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
-    'system_ext/bin/wfdservice64': blob_fixup()
-        .add_needed('libwfdservice_shim.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .replace_needed('android.hidl.base@1.0.so', 'libhidlbase.so'),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
-        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V4-cpp.so'),
+        .replace_needed('android.media.audio.common.types-V2-cpp.so', 'android.media.audio.common.types-V3-cpp.so'),
     ('vendor/bin/hw/android.hardware.security.keymint-service-qti', 'vendor/lib64/libqtikeymint.so'): blob_fixup()
         .add_needed('android.hardware.security.rkp-V3-ndk.so'),
     'vendor/etc/libnfc-nci.conf': blob_fixup()
