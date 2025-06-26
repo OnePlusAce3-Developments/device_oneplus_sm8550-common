@@ -144,14 +144,6 @@ PRODUCT_COPY_FILES += \
 
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 
-# IR
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
-
-PRODUCT_PACKAGES += \
-    android.hardware.ir-service.oplus \
-    consumerir.default
-
 # GPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/gps.conf:$(TARGET_COPY_OUT_ODM)/etc/gps.conf
@@ -183,6 +175,17 @@ PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
     IPACM_Filter_cfg.xml
+
+# IR Blaster
+PRODUCT_PACKAGES += \
+    android.hardware.ir-service.oplus \
+    consumerir.default
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/oplus-hiddenapi-package-allowlist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/oplus-hiddenapi-package-allowlist.xml
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.consumerir.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/android.hardware.consumerir.xml
 
 # Init
 PRODUCT_COPY_FILES += \
