@@ -95,6 +95,7 @@ vendor/lib/rfsa/adsp/bm3a73v08s11n45.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n50.bin
 vendor/lib/rfsa/adsp/bm3a73v08s11n51.bin
 vendor/lib/rfsa/adsp/chre_qsh_shim.so
+vendor/lib/rfsa/adsp/libDspIOProxy_skel.so
 vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
 vendor/lib/rfsa/adsp/libQnnHtpV73Skel.so;MODULE_SUFFIX=_vendor
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
@@ -102,11 +103,18 @@ vendor/lib/rfsa/adsp/libapn_dsp_skel.so
 vendor/lib/rfsa/adsp/libbitml_nsp_skel.so
 vendor/lib/rfsa/adsp/libbitml_nsp_v2_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
+vendor/lib/rfsa/adsp/libdsp_streamer_qvrcam_receiver.so
 vendor/lib/rfsa/adsp/libevadsp_3_0.so
+vendor/lib/rfsa/adsp/libeye_tracking_dsp_sample_skel.so
+vendor/lib/rfsa/adsp/libhalide_hexagon_remote_skel.so
 vendor/lib/rfsa/adsp/libhdr_skel.so
 vendor/lib/rfsa/adsp/libhme_dsp_skel.so
 vendor/lib/rfsa/adsp/libmctfengine_skel.so
 vendor/lib/rfsa/adsp/libosie_skel.so
+vendor/lib/rfsa/adsp/libqvr_3dof_tracker_skel.so
+vendor/lib/rfsa/adsp/libqvr_cam_dsp_driver_skel.so
+vendor/lib/rfsa/adsp/libqvr_dsp_driver_skel.so
+vendor/lib/rfsa/adsp/libtracker_6dof_skel_8450.so
 vendor/lib/rfsa/adsp/nearby.napp_header;MODULE_SUFFIX=.napp_header
 vendor/lib/rfsa/adsp/nearby.so
 
