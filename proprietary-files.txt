@@ -1074,7 +1074,7 @@ odm/lib64/libarcsoft_dualcam_refocus_preview.so
 odm/lib64/libarcsoft_dualcam_refocus_uw.so
 odm/lib64/libarcsoft_eis_wrapper.so
 odm/lib64/libarcsoft_hdr_couple_api.so
-odm/lib64/libarcsoft_hdr_denoise_api.so;FIX_SONAME
+odm/lib64/libarcsoft_hdr_denoise_api.so
 odm/lib64/libarcsoft_high_dynamic_range.so
 odm/lib64/libarcsoft_high_dynamic_range_couple.so
 odm/lib64/libarcsoft_high_dynamic_range_couple_v4.so
