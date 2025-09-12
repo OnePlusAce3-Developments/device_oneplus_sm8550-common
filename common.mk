@@ -6,6 +6,7 @@
 
 # Add common definitions for Qualcomm
 $(call inherit-product, device/qcom/common/common.mk)
+TARGET_BOARD_PLATFORM := kalama
 
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -55,9 +56,9 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.kalama \
     vendor.qti.hardware.AGMIPC@1.0-impl
 
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
+AUDIO_HAL_DIR := vendor/qcom/opensource/audio-hal/primary-hal
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/kalama
-CONFIG_PAL_SRC_DIR := $(AUDIO_HAL_DIR)/../pal/configs/kalama
+CONFIG_PAL_SRC_DIR := $(AUDIO_HAL_DIR)/../../pal/configs/kalama
 
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
@@ -449,6 +450,10 @@ PRODUCT_PACKAGES += \
     firmware_wlanmdsp.otaupdate_symlink \
     firmware_wlan_mac.bin_symlink \
     firmware_WCNSS_qcom_cfg.ini_symlink
+
+# Wlan kernel modules
+TARGET_USES_QMAA_OVERRIDE_WLAN := true
+include device/qcom/wlan/kalama/wlan.mk
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8550-common/sm8550-common-vendor.mk)
