@@ -257,8 +257,7 @@ PRODUCT_PACKAGES += \
 # OPlus dummy services
 PRODUCT_PACKAGES += \
     vendor.oplus.hardware.commondcs-service \
-    vendor.oplus.hardware.osense.client-service \
-    vendor.oplus.hardware.performance-service
+    vendor.oplus.hardware.osense.client-service
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
