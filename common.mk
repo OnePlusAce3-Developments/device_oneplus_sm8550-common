@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
     audio.usbv2.default \
     libats
@@ -46,10 +45,6 @@ PRODUCT_PACKAGES += \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
 # Boot control
 PRODUCT_PACKAGES += \
@@ -195,10 +190,12 @@ PRODUCT_PACKAGES += \
     vendor.qti.qspa-service
 
 # QTI common components
+TARGET_USE_AIDL_QTI_BT_AUDIO := true
 TARGET_COMMON_QTI_COMPONENTS := \
     adreno \
     alarm \
     av \
+    bt \
     display \
     gps \
     init \
