@@ -280,7 +280,8 @@ TARGET_BOARD_PLATFORM := kalama
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service-qti \
+    android.hardware.power@1.2.vendor
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/kalama/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
@@ -288,6 +289,10 @@ PRODUCT_COPY_FILES += \
 # QSPA
 PRODUCT_PACKAGES += \
     vendor.qti.qspa-service
+
+# QTI common components
+TARGET_COMMON_QTI_COMPONENTS := \
+    perf
 
 # QTI fwk-detect
 PRODUCT_PACKAGES += \
